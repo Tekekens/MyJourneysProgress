@@ -1,0 +1,213 @@
+html {
+  background-color: cadetblue;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgba(0,0,0,0.3);
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 150, 255, 0.8);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
+  width: 80vw;
+}
+
+.box .img {
+  width: 49%;
+  position: relative;
+  border: 3px solid #ddd;
+  box-shadow: 0 0 15px rgba(0, 150, 255, 0.8);
+  border-radius: 50%;
+  }
+
+.box .info {
+  color: white;
+  text-shadow: 0 0 15px #ffff;
+  width: 50%;
+  flex-grow: 0;
+}
+
+.box .info .yk {
+  box-shadow: 0 0 30px #8cd4ff;
+  padding: 5px 0;
+  color: #8cd4ff;
+  text-shadow: 0 0 15px #8cd4ff, 0 0 30px #8cd4ff;
+  margin-bottom: 50px;
+}
+
+.box .info p {
+  text-align: end;
+}
+
+.box .h1 {
+  flex-grow: 2;
+  padding: 25px 0 5px 0;
+  color: #8cd4ff;
+  text-shadow: 0 0 15px #8cd4ff, 0 0 30px #8cd4ff;
+}
+
+.box .details {
+  text-align: center;
+  margin-top: 5;
+  width: 49%;
+  color: white;
+}
+
+.box .details h3 {
+  text-align: center;
+  color: #ffff;
+  text-shadow: 0 0 10px white;
+}
+
+.box .details i {
+  font-size: 30px;
+  color: #1877F2;
+}
+
+.box .details .fa-tiktok {
+  color: #000000;
+  text-shadow:
+    0 -5px 10px #FE2C55,
+    0 -10px 20px #FE2C55,
+    0 5px 10px #25F4EE,
+    0 10px 20px #25F4EE;
+}
+
+.box .details .fb {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  transition: transform 0.3s ease 0s;
+}
+
+.fb:hover {
+  transform: scale(1.2);
+  color: #1877F2; /* Facebook blue */
+  text-shadow: 0 0 10px #1877F2;
+}
+
+.box .details .tt {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  transition: transform 0.3s ease 0s;
+}
+
+.tt:hover {
+  transform: scale(1.2);
+  color: #1877F2; /* Facebook blue */
+  text-shadow: 0 0 10px #0000;
+}
+
+.box .details2 {
+  width: 50%;
+}
+
+.box .details2 p {
+  color: white
+}
+
+.box .details2 h3 {
+  text-align: center;
+  color: #ffff;
+  text-shadow: 0 0 10px white;
+}
+
+.box .details2 i {
+  font-size: 30px;
+  color: #D14836;
+}
+
+.box .details2 .fa-x-twitter {
+  font-size: 30px;
+  color: #000000;
+}
+
+.box .details2 a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  transition: transform 0.3s ease 0s;
+}
+
+.box .details2 a:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+  text-shadow: 0 0 10px #0000;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.navigation ul {
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Helvetica, Arial, sans-serif
+}
+
+.navigation li {
+  background-color: dimgray;
+  float: left;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 7px;
+}
+
+.navigation .no1 {
+  flex-grow: 1;
+}
+
+.navigation .no2 {
+  flex-grow: 1;
+}
+
+.navigation .no3 {
+  flex-grow: 1;
+}
+
+.navigation .no4 {
+  flex-grow: 1;
+}
+
+.navigation a {
+  color: #333;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+.navigation a:hover {
+  background-color: gray;
+  color: white;
+}
+
