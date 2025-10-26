@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/ProjectStyle.css"/>
+  <title>Project Page | Personal Blog</title>
+</head>
+
+<body>
+  <audio id="clickSound" src="audio/mixkit-sci-fi-click-900.wav" preload="auto"></audio>
+
+  <section id="project">
+    <h2>Projects</h2>
+    <div class="projects">
+      <p><strong>Hello World</strong><br>My first ever succesful output</p>
+      <img src="images/Screenshot (7).png" alt="Hello World">
+    </div>
+    <div class="projects">
+      <p><strong>ICT 11-A 1st Sem Schedule</strong><br>ICT 11-A 1st Sem Schedule for S.Y. 2025-2026</p>
+      <img src="images/Screenshot (2).png" alt="Schedule">
+    </div>
+    <div class="projects">
+      <p><strong>Our Second Activity</strong><br> Our second activity</p>
+      <img src="images/Screenshot (8).png" alt="Activity">
+    </div>
+  </section>
+  
+  <nav class="navigation">
+    <ul>
+      <li class="no1"><a href="index.html"><i class="fa-duotone fa-solid fa-house"></i>HOME</a></li>
+      <li class="no2"><a href="Main.html"><i class="fa-duotone fa-regular fa-user"></i>ABOUT</a></li>
+      <li class="no3"><a href="Projects.html"><i class="fa-duotone fa-solid fa-briefcase"></i>PROJECTS</a></li>
+      <li class="no4"><a href="Contacts.html"><i class="fa-solid fa-address-card"></i>CONTACT</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Not my script T^T-->
+  <script>
+    const links = document.querySelectorAll('.navigation a'); // selects all <a> in nav
+    const clickSound = document.getElementById('clickSound');
+
+    links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+
+      e.preventDefault(); 
+      setTimeout(() => {
+        window.location.href = link.href;
+        }, 500);
+      });
+    });
+  </script>
+</body>
+</html>

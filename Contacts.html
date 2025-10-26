@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/ContactsStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap">
+  <title>Contact Page | Personal Blog</title>
+</head>
+
+<body>
+  <audio id="clickSound" src="audio/mixkit-sci-fi-click-900.wav" preload="auto"></audio>
+
+    <div class="box">
+      <img src="images/Matt1.jpeg" class="img">
+      <div class="info">
+        <h1 class="yk">[ INFO ]</h1>
+        <p>Name : John Mattew R. Nabaja</p>
+        <p>Gender : Male</p>
+        <p>Age : <span id="age"></span></p>
+        <p>Date of birth : June 13, 2007</p>
+        <p>Nationality : Filipino</p>
+      </div>
+      <h1 class="h1">[ YOU CAN FIND ME HERE ]</h1>
+      <div class="details">
+        <h3><i class="fa-brands fa-facebook"></i>FACEBOOK</h3>
+        <a href="https://www.facebook.com/share/14Mhxo2gP9u/" class="fb">John Mattew R. Nabaja</a>
+        <h3><i class="fa-brands fa-tiktok"></i>TIKTOK</h3>
+        <a href="https://www.tiktok.com/@tekekens?_t=ZS-90g0i6RGMoj&_r=1" class="tt">Tekekens</a>
+      </div>
+      <div class="details2">
+        <h3><i class="fa-regular fa-envelope"></i>GMAIL</h3>
+        <p>johnmattew313@gmail.com</p>
+        <h3><i class="fa-brands fa-x-twitter"></i>X</h3>
+        <a href="https://x.com/tekekens?t=VxhgdrR8fRACEhX5_NDg0g&s=09">Tekekens</a>
+      </div>
+      
+      <!-- Not my code T~T -->
+      <script>
+    const birthDate = new Date("2007-06-13");
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    const dayDiff = today.getDate() - birthDate.getDate();
+
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+      age--;
+    }
+
+    document.getElementById("age").textContent = `${age} years old.`;
+  </script>
+      
+    </div>
+
+  <nav class="navigation">
+    <ul>
+      <li class="no1"><a href="index.html"><i class="fa-duotone fa-solid fa-house"></i>HOME</a></li>
+      <li class="no2"><a href="Main.html"><i class="fa-duotone fa-regular fa-user"></i>ABOUT</a></li>
+      <li class="no3"><a href="Projects.html"><i class="fa-duotone fa-solid fa-briefcase"></i>PROJECTS</a></li>
+      <li class="no4"><a href="Contacts.html"><i class="fa-solid fa-address-card"></i>CONTACT</a></li>
+    </ul>
+  </nav>
+      
+      <!-- Not my script T^T-->
+  <script>
+    const links = document.querySelectorAll('.navigation a'); // selects all <a> in nav
+    const clickSound = document.getElementById('clickSound');
+
+    links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+
+      e.preventDefault(); 
+      setTimeout(() => {
+        window.location.href = link.href;
+        }, 500);
+      });
+    });
+  </script>
+</body>
+</html>

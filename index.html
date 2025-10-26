@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles/HomeStyle.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap">
+  <title>Home Page | Personal Blog</title>
+</head>
+
+<body>
+  <audio id="clickSound" src="audio/mixkit-sci-fi-click-900.wav" preload="auto"></audio>
+
+  <div class="me">
+    <h1><b>Welcome To My Website</b></h1>
+    <p>[ <span>A place to get a glimpes to my personal life</span> ]</p>
+    <a href="Main.html" class="proceed" id="link"> Proceed? </a>
+  </div>
+  
+  <!-- Not my script T^T -->
+  <script>
+    const link = document.getElementById('link');
+    const clickSound = document.getElementById('clickSound');
+
+    link.addEventListener('click', (e) => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+
+      e.preventDefault(); 
+      setTimeout(() => {
+        window.location.href = link.href;
+      }, 500);
+    });
+  </script>
+</body>
+</html>
